@@ -13,17 +13,21 @@
           <li class="list-group-item">telephone: {{info.tel}}</li>
         </ul>
       </div>
-      <div>
-        <div class="form-group">
-          <label class="control-label">Message</label>
-          <input type="text" [(ngModel)]="commentaire.message">
 
+      <form #f="ngForm" (ngSubmit)="onAddcommenraire(f.value)">
 
-  <button [disabled]="!commentaire.message" class="btn btn-primary" (click)="onAddcommenraire()">Ajoute Commentaire</button>
+        <div>
+
+          <div class="form-group">
+            <label class="control-label">Message</label>
+            <input required name="message" ngModel type="text" [(ngModel)]="commentaire.message" >
+            <button [disabled]="!f.valid" class="btn btn-primary" type="submit">Ajoute Commentaire</button>
+          </div>
+
         </div>
 
+      </form>
 
-      </div>
 
       <div>
         <h3>Commentaires: </h3>

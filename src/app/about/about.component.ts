@@ -23,10 +23,12 @@ export class AboutComponent implements OnInit {
     message: "",
   }
 
-  onAddcommenraire(){
-    this.commentaire.date = new Date();
-    this.comments.push(this.commentaire)
+  onAddcommenraire(c){
+    console.log(c)
+    c.date = new Date();
+    this.comments.push(c)
     this.commentaire={date:null,message:""}
+
 
   }
   constructor() { }
