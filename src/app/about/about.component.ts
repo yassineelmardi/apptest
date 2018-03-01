@@ -15,16 +15,16 @@ export class AboutComponent implements OnInit {
     this.info=aboutService.getInfo();
   }
 
-/*  commentaire: any ={
+  commentaire: any ={
     date: null,
     message: "",
-  }*/
+  }
 
   onAddcommenraire(c){
     console.log(c)
     c.date = new Date();
     this.aboutService.addComment(c);
-   /* this.commentaire={date:null,message:""}*/
+    this.commentaire={date:null,message:""}
 
 
   }

@@ -1,9 +1,11 @@
-<!--<h1>
-  {{title}}
-  <li>{{contact.name}}</li>
-  <li>{{contact.prenom}}</li>
-</h1>
-<br>-->
-<p></p>
-<app-about></app-about>
-<!--<app-contacts></app-contacts>-->
+<div class="container">
+  <button routerLink="/about"  class="btn btn-primary">About</button>
+  <button  routerLink="/contact" class="btn btn-primary">Contact</button>
+
+<router-outlet>
+
+
+</router-outlet>
+
+
+</div>
