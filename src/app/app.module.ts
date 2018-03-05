@@ -8,10 +8,12 @@ import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import {AboutService} from '../services/aboutservice';
 import {Route, RouterModule, Routes} from "@angular/router";
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes :Routes=[
   {path:'about', component:AboutComponent},
   {path:'contact', component:ContactsComponent},
+  {path:'gallery', component:GalleryComponent},
   {path:'', redirectTo:'/about',pathMatch:'full'}
 
 
@@ -21,7 +23,8 @@ const routes :Routes=[
   declarations: [
     AppComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+
+<div class="container">
+<div class="panel panel-primary">
+<div class="panel-heading">Gallery Component</div>
+<div class="panel-body">
+
+  <form #f="ngForm" (ngSubmit)="onSearch(f.value)" >
+
+
+  <div class="form-group" >
+    <label >Mon clé</label>
+    <input type="text" name="motcle" ngModel required>
+
+    <button type="submit" class="bnt btn-primary">Chercher</button>
+  </div>
+
+
+  </form>
+
+<div *ngFor="let p of pagePhotos?.hits" class="col-md-3">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading cadre">
+      <img src="{{p.userImageURL}}" class="img-circle" width="50" height="50">
+    </div>
+<div class="panel-body">
+<img src="{{p.previewURL}}">
+
+</div>
+
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
